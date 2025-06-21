@@ -2,76 +2,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roque Studios</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #FFFFFF;
-            color: #021734;
-            text-align: center;
-        }
-        header {
-            padding: 2rem 1rem;
-            background-color: #000F2D;
-            color: white;
-        }
-        header img {
-            width: 100px;
-            height: auto;
-        }
-        h1 {
-            margin: 0.5rem 0;
-        }
-        section {
-            padding: 2rem 1rem;
-        }
-        footer {
-            background-color: #011633;
-            color: white;
-            padding: 1rem;
-        }
-        a {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roque Studios</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <div class="logo">Roque Studios</div>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#get-started" class="btn">Empezar</a>
+    </nav>
+  </header>
 
-<header>
-    <img src="logo.png" alt="Roque Studios Logo">
-    <h1>Roque Studios</h1>
-    <p>Software a la medida. Simulaciones. Videojuegos.</p>
-</header>
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Software a la medida & Videojuegos</h1>
+      <p>Construimos soluciones digitales con IA para PyMEs y experiencias interactivas móviles.</p>
+      <div class="hero-buttons">
+        <a href="#servicios" class="btn">Ver servicios</a>
+        <a href="#contacto" class="link">Contáctanos</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="logo.png" alt="Logo Roque Studios">
+    </div>
+  </main>
 
-
-<section>
-    <h2>🚀 Servicios Destacados</h2>
-    <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
-        <li>🧩 Desarrollo de software a la medida</li>
-        <li>🧠 Integraciones con Inteligencia Artificial</li>
-        <li>📱 Aplicaciones web modernas y seguras</li>
-        <li>🎮 Simulaciones y videojuegos 2D para móviles</li>
-        <li>💡 Prototipado rápido para startups y PyMEs</li>
+  <section id="servicios" class="services">
+    <h2>Servicios Destacados</h2>
+    <ul>
+      <li>🧩 Desarrollo de software a la medida</li>
+      <li>🤖 Integraciones con Inteligencia Artificial</li>
+      <li>🎮 Simulaciones y videojuegos 2D para móviles</li>
+      <li>🌐 Landing pages profesionales</li>
+      <li>📲 Automatización y bots para negocios</li>
     </ul>
-</section>
+  </section>
 
-<section>
-    <h2>¿Qué hacemos?</h2>
-    <p>Desarrollamos soluciones de software personalizadas para PyMEs salvadoreñas, con integración de inteligencia artificial y visión de futuro.</p>
-</section>
+  <section id="contacto" class="contacto">
+    <h2>¿Listo para empezar?</h2>
+    <p>Escríbenos a <strong>contacto@roquestudios.io</strong></p>
+  </section>
 
-<section style="background-color:#F4F4F4;">
-    <h2>Contáctanos</h2>
-    <p>Escríbenos a <strong>contacto@roquestudios.io</strong> para cotizar tu proyecto o pedir más información.</p>
-</section>
-
-<footer>
+  <footer>
     <p>&copy; 2025 Roque Studios. Todos los derechos reservados.</p>
-</footer>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
