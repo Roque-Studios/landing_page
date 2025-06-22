@@ -1,0 +1,26 @@
+# Node
+node_modules/
+.next/
+out/
+*.log
+
+# Dependency locks
+package-lock.json
+pnpm-lock.yaml
+
+# IDEs y sistemas
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+.cache/
+coverage/
+
+# Optional
+*.tsbuildinfo
