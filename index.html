@@ -1,0 +1,1105 @@
+<!doctype html>
+
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Roque Studios | Ingeniería de Software desde El Salvador</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#003548",
+              "on-primary-container": "#00526e",
+              "inverse-surface": "#e1e2ec",
+              "on-tertiary": "#003915",
+              "on-surface-variant": "#bdc8d0",
+              "on-secondary": "#3f008e",
+              "bg-primary": "#05070D",
+              "accent-glow-blue": "rgba(76, 201, 255, 0.15)",
+              "on-secondary-fixed": "#25005a",
+              "text-primary": "#E5E7EB",
+              "surface-container-low": "#191b22",
+              "border-subtle": "rgba(255, 255, 255, 0.08)",
+              "text-secondary": "#94A3B8",
+              "on-secondary-container": "#c9aeff",
+              error: "#ffb4ab",
+              "secondary-fixed": "#eaddff",
+              outline: "#87929a",
+              "on-background": "#e1e2ec",
+              "tertiary-container": "#3ed76d",
+              "on-tertiary-fixed-variant": "#005321",
+              "on-tertiary-container": "#005924",
+              "secondary-container": "#6001d1",
+              secondary: "#d2bbff",
+              "inverse-primary": "#006688",
+              background: "#11131a",
+              "inverse-on-surface": "#2e3038",
+              "on-primary-fixed": "#001e2b",
+              tertiary: "#60f486",
+              "tertiary-fixed": "#6bff8f",
+              "on-error-container": "#ffdad6",
+              "primary-container": "#4cc9ff",
+              "on-error": "#690005",
+              "primary-fixed-dim": "#74d1ff",
+              "bg-secondary": "#081120",
+              "secondary-fixed-dim": "#d2bbff",
+              "on-secondary-fixed-variant": "#5a00c6",
+              primary: "#a8e0ff",
+              "error-container": "#93000a",
+              "surface-container-lowest": "#0b0e15",
+              "surface-dim": "#11131a",
+              "primary-fixed": "#c1e8ff",
+              "accent-glow-purple": "rgba(124, 58, 237, 0.15)",
+              "surface-container": "#1d1f26",
+              "on-surface": "#e1e2ec",
+              "surface-bright": "#373941",
+              "surface-container-high": "#272a31",
+              "on-tertiary-fixed": "#002109",
+              surface: "#11131a",
+              "tertiary-fixed-dim": "#4ae176",
+              "surface-tint": "#74d1ff",
+              "outline-variant": "#3e484f",
+              "surface-container-highest": "#32353c",
+              "surface-variant": "#32353c",
+              "on-primary-fixed-variant": "#004d67",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              base: "4px",
+              "unit-1": "0.25rem",
+              "margin-desktop": "48px",
+              gutter: "24px",
+              "unit-4": "1rem",
+              "unit-8": "2rem",
+              "unit-2": "0.5rem",
+              "unit-16": "4rem",
+              "max-width": "1280px",
+              "unit-12": "3rem",
+              "margin-mobile": "16px",
+              "unit-6": "1.5rem",
+            },
+            fontFamily: {
+              "body-lg": ["Inter"],
+              "body-md": ["Inter"],
+              "mono-code": ["JetBrains Mono"],
+              "headline-lg-mobile": ["Space Grotesk"],
+              "label-md": ["Inter"],
+              "headline-lg": ["Space Grotesk"],
+              "body-sm": ["Inter"],
+              "headline-md": ["Space Grotesk"],
+              "display-lg": ["Space Grotesk"],
+            },
+            fontSize: {
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "mono-code": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "28px",
+                { lineHeight: "36px", fontWeight: "600" },
+              ],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "72px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #05070d;
+        color: #e5e7eb;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      .grid-overlay {
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 0
+        );
+        background-size: 40px 40px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glow-pulse {
+        animation: pulse 8s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.6;
+          transform: scale(1.1);
+        }
+      }
+      .nav-blur {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+    </style>
+  </head>
+  <body class="font-body-md text-text-primary selection:bg-primary/30">
+    <!-- Header (TopAppBar) -->
+    <header
+      class="fixed top-0 w-full z-50 transition-all duration-300 nav-blur bg-background/80 border-b border-border-subtle h-20"
+    >
+      <div
+        class="flex justify-between items-center max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop h-full"
+      >
+        <a class="flex items-center gap-unit-2 group" href="#">
+          <img
+            alt="Roque Studios Tech Logo"
+            class="h-10 w-auto group-hover:scale-105 transition-transform duration-300"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-TTxhz5bpqM8qq3-2SRLGI0-EJPCY4GQgoXRDCtBGNLbSgo-c4lUPp9Ey6_QhTztiNqZ2jD5wTkN4v0hICn7wPrMAz5h5zxFq8bX5mmzo6-zaRRpc7yESGGyv1IDkmLtYIgHg5PGfD6yhLahpzdEyi9DfsFBhigNOF8Y-ekjQBf9b-V8qze3AagKVqfdE8DNtIBIITkgsPyXBmz7d8wtvfDYeCrglqokoEn-w8B2sYUhyKC87JYrUsUPmzCwc5AA802RhjRnNbTY"
+          />
+          <span
+            class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface hidden sm:inline"
+            >Roque Studios</span
+          >
+        </a>
+        <nav class="hidden md:flex items-center gap-unit-8">
+          <a
+            class="font-label-md text-label-md text-text-secondary hover:text-text-primary transition-colors"
+            href="#servicios"
+            >Servicios</a
+          >
+          <a
+            class="font-label-md text-label-md text-text-secondary hover:text-text-primary transition-colors"
+            href="#proyectos"
+            >Proyectos</a
+          >
+          <a
+            class="font-label-md text-label-md text-text-secondary hover:text-text-primary transition-colors"
+            href="#nosotros"
+            >Nosotros</a
+          >
+          <a
+            class="font-label-md text-label-md text-text-secondary hover:text-text-primary transition-colors"
+            href="#contacto"
+            >Contacto</a
+          >
+        </nav>
+        <div class="flex items-center gap-unit-4">
+          <a
+            class="hidden sm:inline-flex px-unit-6 py-unit-2 bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:bg-primary-container transition-all active:scale-95 duration-300"
+            href="#contacto"
+            >Hablemos</a
+          >
+          <button class="md:hidden text-on-surface">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="relative">
+      <!-- Atmospheric Elements -->
+      <div
+        class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
+      >
+        <div
+          class="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-accent-glow-blue blur-[120px] glow-pulse"
+        ></div>
+        <div
+          class="absolute top-[40%] -right-[10%] w-[50%] h-[50%] bg-accent-glow-purple blur-[120px] glow-pulse"
+          style="animation-delay: -4s"
+        ></div>
+        <div class="absolute inset-0 grid-overlay opacity-20"></div>
+      </div>
+      <!-- Hero Section -->
+      <section class="relative min-h-screen flex items-center pt-20">
+        <div
+          class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-unit-16 w-full"
+        >
+          <div class="max-w-4xl space-y-unit-8">
+            <div
+              class="reveal active inline-flex items-center gap-unit-2 px-unit-3 py-unit-1 bg-surface-container-highest/50 border border-border-subtle rounded-full"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-tertiary animate-pulse"
+              ></span>
+              <span
+                class="font-label-md text-label-md text-tertiary uppercase tracking-widest"
+                >Disponible para nuevos proyectos</span
+              >
+            </div>
+            <h1
+              class="reveal active font-display-lg text-[40px] md:text-display-lg leading-tight md:leading-tight text-text-primary font-bold"
+            >
+              Construimos productos digitales desde
+              <span class="text-primary italic">El Salvador</span> para el
+              mundo.
+            </h1>
+            <p
+              class="reveal active font-body-lg text-body-lg text-text-secondary max-w-2xl"
+            >
+              Ingeniería de software de alto rendimiento. Especializados en
+              escalabilidad SaaS, automatización con IA y experiencias
+              inmersivas. Transformamos visión técnica en valor de negocio.
+            </p>
+            <div class="reveal active flex flex-wrap gap-unit-4 pt-unit-4">
+              <a
+                class="px-unit-8 py-unit-4 bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:shadow-[0_0_20px_rgba(168,224,255,0.4)] transition-all flex items-center gap-2 group"
+                href="#contacto"
+              >
+                Hablar con nosotros
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </a>
+              <a
+                class="px-unit-8 py-unit-4 bg-transparent border border-primary text-primary font-label-md text-label-md rounded-xl hover:bg-primary/5 transition-all"
+                href="#proyectos"
+              >
+                Ver proyectos
+              </a>
+            </div>
+          </div>
+          <div
+            class="reveal active mt-unit-16 grid grid-cols-2 md:grid-cols-4 gap-gutter border-t border-border-subtle pt-unit-8"
+          >
+            <div class="space-y-1">
+              <span
+                class="block font-headline-md text-headline-md font-bold text-primary"
+                >SaaS</span
+              >
+              <span class="text-label-md text-text-secondary"
+                >Infrastructure</span
+              >
+            </div>
+            <div class="space-y-1">
+              <span
+                class="block font-headline-md text-headline-md font-bold text-tertiary"
+                >AI/ML</span
+              >
+              <span class="text-label-md text-text-secondary">Automation</span>
+            </div>
+            <div class="space-y-1">
+              <span
+                class="block font-headline-md text-headline-md font-bold text-secondary"
+                >Web3</span
+              >
+              <span class="text-label-md text-text-secondary">Ecosystems</span>
+            </div>
+            <div class="space-y-1">
+              <span
+                class="block font-headline-md text-headline-md font-bold text-on-primary-container"
+                >Cloud</span
+              >
+              <span class="text-label-md text-text-secondary"
+                >Native Solutions</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section class="py-unit-16 bg-surface-container-lowest/30" id="servicios">
+        <div
+          class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-unit-6 mb-unit-12"
+          >
+            <div class="space-y-unit-2">
+              <span
+                class="font-label-md text-label-md text-primary uppercase tracking-widest"
+                >Lo que construimos</span
+              >
+              <h2 class="font-headline-lg text-headline-lg font-bold">
+                Capacidades de ingeniería de vanguardia.
+              </h2>
+            </div>
+            <p class="max-w-md text-text-secondary font-body-sm text-body-sm">
+              Dominamos el ciclo completo de desarrollo, desde la arquitectura
+              de bajo nivel hasta la experiencia de usuario final.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter"
+          >
+            <!-- Card 1 -->
+            <div
+              class="reveal group p-unit-8 rounded-xl bg-surface-container border border-border-subtle hover:border-primary/50 transition-all duration-500 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-unit-6"
+              >
+                <span class="material-symbols-outlined text-[32px]"
+                  >terminal</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md font-bold mb-unit-4">
+                Software a la Medida
+              </h3>
+              <p
+                class="text-text-secondary font-body-sm text-body-sm leading-relaxed"
+              >
+                Arquitecturas robustas diseñadas para escalar. Resolvemos
+                problemas complejos con código limpio y eficiente.
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="reveal group p-unit-8 rounded-xl bg-surface-container border border-border-subtle hover:border-secondary/50 transition-all duration-500 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-secondary/10 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-unit-6"
+              >
+                <span class="material-symbols-outlined text-[32px]">hub</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md font-bold mb-unit-4">
+                SaaS para PyMEs
+              </h3>
+              <p
+                class="text-text-secondary font-body-sm text-body-sm leading-relaxed"
+              >
+                Digitalización vertical. Creamos herramientas de gestión que
+                permiten a las empresas operar a escala global.
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="reveal group p-unit-8 rounded-xl bg-surface-container border border-border-subtle hover:border-tertiary/50 transition-all duration-500 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-tertiary/10 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary mb-unit-6"
+              >
+                <span class="material-symbols-outlined text-[32px]"
+                  >sports_esports</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md font-bold mb-unit-4">
+                Videojuegos
+              </h3>
+              <p
+                class="text-text-secondary font-body-sm text-body-sm leading-relaxed"
+              >
+                Desarrollo de simulaciones y experiencias interactivas
+                utilizando motores gráficos de última generación.
+              </p>
+            </div>
+            <!-- Card 4 -->
+            <div
+              class="reveal group p-unit-8 rounded-xl bg-surface-container border border-border-subtle hover:border-primary-fixed/50 transition-all duration-500 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 w-24 h-24 bg-primary-fixed/10 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="w-12 h-12 rounded-lg bg-primary-fixed/10 flex items-center justify-center text-primary-fixed mb-unit-6"
+              >
+                <span class="material-symbols-outlined text-[32px]"
+                  >smart_toy</span
+                >
+              </div>
+              <h3 class="font-headline-md text-headline-md font-bold mb-unit-4">
+                IA y Automatización
+              </h3>
+              <p
+                class="text-text-secondary font-body-sm text-body-sm leading-relaxed"
+              >
+                Implementación de LLMs y pipelines de automatización que
+                eliminan la fricción operativa en tu negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Showcase -->
+      <section class="py-unit-16 overflow-hidden" id="proyectos">
+        <div
+          class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="space-y-unit-2 mb-unit-12 text-center">
+            <span
+              class="font-label-md text-label-md text-secondary uppercase tracking-widest"
+              >Casos de Estudio</span
+            >
+            <h2 class="font-headline-lg text-headline-lg font-bold">
+              Sistemas que impulsan el crecimiento.
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-unit-12">
+            <!-- Project 1 -->
+            <div class="reveal group">
+              <div
+                class="relative aspect-video rounded-xl overflow-hidden mb-unit-6 border border-border-subtle bg-surface-container-high"
+              >
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                  data-alt="A high-fidelity dashboard interface of a fantasy sports platform displaying real-time statistics, player rankings, and interactive data visualizations. The UI features a dark, professional aesthetic with sharp blue and neon purple accents, matching the technical and engineer-focused brand identity of Roque Studios. Cinematic lighting highlights the precision of the grid-based layout and technical elements."
+                  src="https://cdn.jsdelivr.net/gh/Roque-Studios/landing_page@main/assets/projects/fantasy.png"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"
+                ></div>
+                <div class="absolute bottom-4 left-4 flex gap-2">
+                  <span
+                    class="px-2 py-1 rounded bg-surface/80 backdrop-blur-md border border-border-subtle text-[10px] font-mono-code uppercase text-primary"
+                    >FastAPI</span
+                  >
+                  <span
+                    class="px-2 py-1 rounded bg-surface/80 backdrop-blur-md border border-border-subtle text-[10px] font-mono-code uppercase text-primary"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="px-2 py-1 rounded bg-surface/80 backdrop-blur-md border border-border-subtle text-[10px] font-mono-code uppercase text-primary"
+                    >Alpine.js</span
+                  >
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md font-bold mb-2">
+                FantasySV
+              </h3>
+              <p class="text-text-secondary font-body-sm text-body-sm mb-4">
+                Plataforma de deportes de gestion de equipo con procesamiento de
+                datos en tiempo para ligas locales.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 text-primary font-label-md text-label-md group/link"
+                href="https://github.com/kevinrev26/proj-fantasysv"
+              >
+                Explorar Proyecto
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                  >arrow_outward</span
+                >
+              </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="reveal group">
+              <div
+                class="relative aspect-video rounded-xl overflow-hidden mb-unit-6 border border-border-subtle bg-surface-container-high"
+              >
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                  data-alt="A sleek mobile application interface for a healthcare drug comparison tool. The design utilizes a clean, data-dense technical minimalist style with high-contrast elements. The background shows soft blue atmospheric glows reflecting off glass-like UI cards. The scene conveys reliability, engineering excellence, and a modern medical-tech environment."
+                  src="https://cdn.jsdelivr.net/gh/Roque-Studios/landing_page@main/assets/projects/cloud_clinic.png"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"
+                ></div>
+                <div class="absolute bottom-4 left-4 flex gap-2">
+                  <span
+                    class="px-2 py-1 rounded bg-surface/80 backdrop-blur-md border border-border-subtle text-[10px] font-mono-code uppercase text-secondary"
+                    >Django</span
+                  >
+                  <span
+                    class="px-2 py-1 rounded bg-surface/80 backdrop-blur-md border border-border-subtle text-[10px] font-mono-code uppercase text-secondary"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="px-2 py-1 rounded bg-surface/80 backdrop-blur-md border border-border-subtle text-[10px] font-mono-code uppercase text-secondary"
+                    >AWS Cloud</span
+                  >
+                </div>
+              </div>
+              <h3 class="font-headline-md text-headline-md font-bold mb-2">
+                Cloud Clinic
+              </h3>
+              <p class="text-text-secondary font-body-sm text-body-sm mb-4">
+                Gestion de pacientes, recetas, citas y clinicas. Motor de
+                búsqueda y comparativa de precios farmacéuticos para el mercado
+                regional.
+              </p>
+              <a
+                class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group/link"
+                href="#"
+              >
+                Explorar Proyecto
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                  >arrow_outward</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Us Section -->
+      <section class="py-unit-16 relative" id="nosotros">
+        <div
+          class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-unit-16 items-center"
+        >
+          <div class="reveal">
+            <span
+              class="font-label-md text-label-md text-tertiary uppercase tracking-widest mb-unit-4 block"
+              >Sobre el Estudio</span
+            >
+            <h2 class="font-headline-lg text-headline-lg font-bold mb-unit-6">
+              Software con visión de producto.
+            </h2>
+            <div
+              class="space-y-unit-4 font-body-md text-body-md text-text-secondary leading-relaxed"
+            >
+              <p>
+                Basados en el corazón tecnológico de El Salvador, en Roque
+                Studios no solo escribimos código; diseñamos soluciones
+                escalables que resuelven problemas de negocio reales.
+              </p>
+              <p>
+                Nuestra filosofía se centra en la
+                <strong>Excelencia Técnica</strong> y la
+                <strong>Transparencia</strong>. Creemos que el software debe ser
+                una ventaja competitiva, no una carga técnica.
+              </p>
+              <p>
+                Combinamos el talento local con estándares globales de
+                ingeniería para entregar productos que compiten en mercados
+                internacionales de Silicon Valley y Europa.
+              </p>
+            </div>
+          </div>
+          <div class="reveal relative">
+            <div
+              class="aspect-square rounded-2xl border border-border-subtle bg-surface-container overflow-hidden p-unit-8 flex items-center justify-center relative"
+            >
+              <div
+                class="absolute inset-0 bg-accent-glow-blue/10 blur-3xl rounded-full scale-50"
+              ></div>
+              <img
+                alt="Roque Studios Branding"
+                class="w-2/3 h-auto relative z-10 drop-shadow-[0_0_30px_rgba(168,224,255,0.3)]"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-TTxhz5bpqM8qq3-2SRLGI0-EJPCY4GQgoXRDCtBGNLbSgo-c4lUPp9Ey6_QhTztiNqZ2jD5wTkN4v0hICn7wPrMAz5h5zxFq8bX5mmzo6-zaRRpc7yESGGyv1IDkmLtYIgHg5PGfD6yhLahpzdEyi9DfsFBhigNOF8Y-ekjQBf9b-V8qze3AagKVqfdE8DNtIBIITkgsPyXBmz7d8wtvfDYeCrglqokoEn-w8B2sYUhyKC87JYrUsUPmzCwc5AA802RhjRnNbTY"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tech Stack Section -->
+      <section class="relative py-24 overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute inset-0 pointer-events-none">
+          <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.12),transparent_70%)]"
+          ></div>
+
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/5 blur-[180px] rounded-full"
+          ></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative max-w-6xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <span
+              class="font-mono-code text-xs tracking-[0.35em] uppercase text-slate-400"
+            >
+              Nuestro Ecosistema Tecnológico
+            </span>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Backend -->
+            <div>
+              <h3
+                class="text-white font-semibold text-lg mb-6 border-b border-slate-800 pb-3"
+              >
+                Backend
+              </h3>
+
+              <div class="grid grid-cols-2 gap-6">
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/python"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >PYTHON</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/fastapi"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >FASTAPI</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/django"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >DJANGO</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/postgresql"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >POSTGRESQL</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/redis"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >REDIS</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img src="https://cdn.simpleicons.org/go" class="h-10 w-10" />
+                  <span class="text-xs tracking-wider text-slate-400">GO</span>
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/rust"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >RUST</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Cloud -->
+            <div>
+              <h3
+                class="text-white font-semibold text-lg mb-6 border-b border-slate-800 pb-3"
+              >
+                Cloud & DevOps
+              </h3>
+
+              <div class="grid grid-cols-2 gap-6">
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/docker"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >DOCKER</span
+                  >
+                </div>
+
+                <!--<div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/amazonwebservices"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400">AWS</span>
+                </div>-->
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/googlecloud"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400">GCP</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI -->
+            <div>
+              <h3
+                class="text-white font-semibold text-lg mb-6 border-b border-slate-800 pb-3"
+              >
+                AI & Simulation
+              </h3>
+
+              <div class="grid grid-cols-2 gap-6">
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/nvidia"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >NVIDIA</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/python"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >PYTHON</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Game Development -->
+            <div>
+              <h3
+                class="text-white font-semibold text-lg mb-6 border-b border-slate-800 pb-3"
+              >
+                Game Development
+              </h3>
+
+              <div class="grid grid-cols-2 gap-6">
+                <div class="flex flex-col items-center gap-2">
+                  <img
+                    src="https://cdn.simpleicons.org/unrealengine"
+                    class="h-10 w-10"
+                  />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >UNREAL ENGINE</span
+                  >
+                </div>
+
+                <!--<div class="flex flex-col items-center gap-2">
+                  <img src="/images/defold.svg" class="h-10 w-10" />
+                  <span class="text-xs tracking-wider text-slate-400"
+                    >DEFOLD</span
+                  >
+                </div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Process Section -->
+      <section class="py-unit-16">
+        <div
+          class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="max-w-2xl mx-auto text-center mb-unit-16">
+            <h2 class="font-headline-lg text-headline-lg font-bold mb-4">
+              Ingeniería que fluye.
+            </h2>
+            <p class="text-text-secondary">
+              Un proceso iterativo diseñado para reducir el tiempo de
+              lanzamiento sin comprometer la estabilidad.
+            </p>
+          </div>
+          <div class="relative grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            <!-- Connecting Line (Desktop) -->
+            <div
+              class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-border-subtle -z-10"
+            ></div>
+            <!-- Step 1 -->
+            <div
+              class="reveal relative flex flex-col items-center text-center space-y-4"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-surface-container border border-border-subtle flex items-center justify-center text-primary font-bold text-lg relative z-10 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+              >
+                1
+              </div>
+              <h4 class="font-headline-md text-headline-md font-bold">Idea</h4>
+              <p class="text-body-sm text-text-secondary">
+                Descubrimiento de objetivos y factibilidad técnica.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div
+              class="reveal relative flex flex-col items-center text-center space-y-4"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-surface-container border border-border-subtle flex items-center justify-center text-primary font-bold text-lg relative z-10 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+              >
+                2
+              </div>
+              <h4 class="font-headline-md text-headline-md font-bold">
+                Requerimientos
+              </h4>
+              <p class="text-body-sm text-text-secondary">
+                Definición de arquitectura y especificaciones.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div
+              class="reveal relative flex flex-col items-center text-center space-y-4"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-surface-container border border-border-subtle flex items-center justify-center text-primary font-bold text-lg relative z-10 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+              >
+                3
+              </div>
+              <h4 class="font-headline-md text-headline-md font-bold">
+                Desarrollo
+              </h4>
+              <p class="text-body-sm text-text-secondary">
+                Sprints de código de alta calidad y CI/CD.
+              </p>
+            </div>
+            <!-- Step 4 -->
+            <div
+              class="reveal relative flex flex-col items-center text-center space-y-4"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-surface-container border border-border-subtle flex items-center justify-center text-primary font-bold text-lg relative z-10 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+              >
+                4
+              </div>
+              <h4 class="font-headline-md text-headline-md font-bold">
+                Iteración
+              </h4>
+              <p class="text-body-sm text-text-secondary">
+                Lanzamiento, feedback y optimización continua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section class="py-unit-16 relative" id="contacto">
+        <div
+          class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div
+            class="reveal p-unit-8 md:p-unit-16 rounded-3xl bg-surface-container-high border border-border-subtle text-center relative overflow-hidden"
+          >
+            <div
+              class="absolute -top-[20%] -right-[10%] w-[40%] h-[40%] bg-primary/20 blur-[100px] pointer-events-none"
+            ></div>
+            <h2
+              class="font-headline-lg text-headline-lg font-bold mb-unit-6 max-w-2xl mx-auto"
+            >
+              ¿Tienes una idea o un problema que resolver?
+            </h2>
+            <p
+              class="font-body-lg text-body-lg text-text-secondary mb-unit-12 max-w-xl mx-auto"
+            >
+              Estamos listos para llevar tu visión técnica al siguiente nivel.
+              Contáctanos hoy mismo.
+            </p>
+            <div class="flex flex-wrap justify-center gap-unit-4">
+              <a
+                class="px-unit-8 py-unit-4 bg-[#25D366] text-white font-label-md text-label-md rounded-xl hover:scale-105 transition-all flex items-center gap-2"
+                href="https://wa.me/50379262030"
+              >
+                <span class="material-symbols-outlined">chat</span>
+                WhatsApp
+              </a>
+              <a
+                class="px-unit-8 py-unit-4 bg-primary text-on-primary font-label-md text-label-md rounded-xl hover:scale-105 transition-all flex items-center gap-2"
+                href="mailto:contacto@roquestudios.io"
+              >
+                <span class="material-symbols-outlined">mail</span>
+                Enviar Correo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full py-unit-16 border-t border-border-subtle bg-surface-container-lowest"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-gutter max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop"
+      >
+        <div class="md:col-span-5 space-y-unit-6">
+          <a class="flex items-center gap-unit-2" href="#">
+            <img
+              alt="Roque Studios Tech Logo"
+              class="h-8 w-auto"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-TTxhz5bpqM8qq3-2SRLGI0-EJPCY4GQgoXRDCtBGNLbSgo-c4lUPp9Ey6_QhTztiNqZ2jD5wTkN4v0hICn7wPrMAz5h5zxFq8bX5mmzo6-zaRRpc7yESGGyv1IDkmLtYIgHg5PGfD6yhLahpzdEyi9DfsFBhigNOF8Y-ekjQBf9b-V8qze3AagKVqfdE8DNtIBIITkgsPyXBmz7d8wtvfDYeCrglqokoEn-w8B2sYUhyKC87JYrUsUPmzCwc5AA802RhjRnNbTY"
+            />
+            <span
+              class="font-headline-md text-headline-md font-bold text-primary"
+              >Roque Studios</span
+            >
+          </a>
+          <p class="text-text-secondary font-body-sm text-body-sm max-w-xs">
+            Ingeniería de software de alta fidelidad desde El Salvador.
+            Construyendo el futuro de la economía digital centroamericana.
+          </p>
+          <div class="flex gap-4 text-text-secondary">
+            <a class="hover:text-primary transition-colors" href="#"
+              ><span class="material-symbols-outlined">public</span></a
+            >
+            <a class="hover:text-primary transition-colors" href="#"
+              ><span class="material-symbols-outlined">code</span></a
+            >
+            <a class="hover:text-primary transition-colors" href="#"
+              ><span class="material-symbols-outlined">alternate_email</span></a
+            >
+          </div>
+        </div>
+        <div class="md:col-span-2 space-y-unit-4">
+          <h4 class="font-label-md text-label-md text-text-primary uppercase">
+            Empresa
+          </h4>
+          <ul class="space-y-2 text-text-secondary text-label-md">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#servicios"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#proyectos"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#nosotros"
+                >Nosotros</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-2 space-y-unit-4">
+          <h4 class="font-label-md text-label-md text-text-primary uppercase">
+            Legal
+          </h4>
+          <ul class="space-y-2 text-text-secondary text-label-md">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Privacy</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Terms</a>
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 space-y-unit-4">
+          <h4 class="font-label-md text-label-md text-text-primary uppercase">
+            Contacto
+          </h4>
+          <p class="text-text-secondary text-label-md">
+            San Salvador, El Salvador
+          </p>
+          <p class="text-text-secondary text-label-md">
+            contacto@roquestudios.io
+          </p>
+        </div>
+        <div
+          class="md:col-span-12 pt-unit-8 mt-unit-8 border-t border-border-subtle/50 flex flex-col md:flex-row justify-between gap-4"
+        >
+          <p class="text-label-md text-text-secondary">
+            © 2026 Roque Studios. Engineering Excellence.
+          </p>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[16px] text-primary"
+              >verified_user</span
+            >
+            <span
+              class="text-label-md text-text-secondary uppercase tracking-widest"
+              >Hecho en El Salvador</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Scroll Reveal Animation
+      function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        for (let i = 0; i < reveals.length; i++) {
+          const windowHeight = window.innerHeight;
+          const elementTop = reveals[i].getBoundingClientRect().top;
+          const elementVisible = 150;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+
+      // Initial check on load
+      reveal();
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Header translucency on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 20) {
+          header.classList.add("py-1");
+          header.classList.remove("h-20");
+          header.classList.add("h-16");
+        } else {
+          header.classList.remove("py-1");
+          header.classList.add("h-20");
+          header.classList.remove("h-16");
+        }
+      });
+    </script>
+  </body>
+</html>
