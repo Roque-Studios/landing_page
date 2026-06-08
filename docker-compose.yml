@@ -1,0 +1,35 @@
+services:
+  landing-page:
+    image: nginx:1.29-alpine
+    container_name: roque-studios-landing
+    restart: unless-stopped
+
+    ports:
+      - "8090:80"
+
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+    healthcheck:
+      test: ["CMD-SHELL", "wget --quiet --tries=1 --spider http://localhost || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+    security_opt:
+      - no-new-privileges:true
+
+    read_only: true
+
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+
+    networks:
+      - landing
+
+networks:
+  landing:
+    driver: bridge
