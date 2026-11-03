@@ -1,0 +1,12 @@
+# Production override: pull pre-built images from GHCR instead of building
+# on the host. Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml pull
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+services:
+  landing-page:
+    build: !reset null
+    image: ghcr.io/roque-studios/landing_page:${IMAGE_TAG:-latest}
+
+  leads-api:
+    build: !reset null
+    image: ghcr.io/roque-studios/landing_page-api:${IMAGE_TAG:-latest}
