@@ -21,6 +21,11 @@ pnpm-lock.yaml
 dist/
 .cache/
 coverage/
+styles.css
 
 # Optional
 *.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc

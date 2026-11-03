@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted fonts (OFL licensed, see assets/fonts/<family>/OFL.txt) */
+@font-face {
+  font-family: "Bangers";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/bangers/bangers-latin-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Comic Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/comic-neue/comic-neue-latin-700.woff2")
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/inter/inter-latin-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/inter/inter-latin-500.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/inter/inter-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/inter/inter-latin-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: theme("colors.ink");
+    color: theme("colors.grey");
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Caption box: near-black fill, 4px cyan border, square corners */
+  .caption-box {
+    @apply bg-ink/95 border-4 border-cyan px-6 py-5 text-grey font-body;
+  }
+
+  /* Speech balloon: white ellipse, 5px black outline, tail, dark uppercase text */
+  .speech-balloon {
+    @apply relative bg-white text-ink font-comic uppercase text-center px-6 py-5 rounded-[50%/40%];
+    border: 5px solid #060608;
+  }
+  .speech-balloon::after {
+    content: "";
+    position: absolute;
+    left: 2.5rem;
+    bottom: -1.1rem;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 20px solid #060608;
+  }
+  .speech-balloon::before {
+    content: "";
+    position: absolute;
+    left: 2.75rem;
+    bottom: -0.7rem;
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 16px solid #ffffff;
+    z-index: 1;
+  }
+
+  /* Shout balloon: jagged shape, red outline, red Bangers text — The Old Way only */
+  .shout-balloon {
+    @apply relative bg-ink text-red font-display uppercase text-center px-8 py-6;
+    border: 3px solid theme("colors.red");
+    clip-path: polygon(
+      2% 18%,
+      12% 2%,
+      22% 14%,
+      34% 0%,
+      46% 15%,
+      58% 2%,
+      70% 16%,
+      82% 1%,
+      92% 15%,
+      100% 30%,
+      93% 45%,
+      100% 60%,
+      91% 72%,
+      98% 88%,
+      84% 97%,
+      73% 85%,
+      60% 99%,
+      48% 86%,
+      36% 100%,
+      25% 87%,
+      13% 98%,
+      5% 82%,
+      0% 65%,
+      7% 50%,
+      0% 35%
+    );
+  }
+
+  /* Section number band: "01 ·" style heading, thin rule */
+  .section-number {
+    @apply flex items-center gap-4 text-cyan font-display text-2xl md:text-3xl tracking-wide;
+  }
+  .section-number::after {
+    content: "";
+    @apply flex-1 h-px bg-graphite;
+  }
+
+  /* Stat card: graphite surface, big cyan Bangers number, one Inter line below */
+  .stat-card {
+    @apply bg-graphite border border-white/5 p-6 flex flex-col gap-2;
+  }
+  .stat-card .stat-number {
+    @apply font-display text-cyan text-4xl md:text-5xl tracking-wide;
+  }
+
+  /* Compadre aside: small panel, green glow, speech balloon */
+  .compadre-aside {
+    @apply bg-charcoal border border-green/30 p-6 relative;
+    box-shadow: 0 0 40px -10px rgba(60, 255, 120, 0.25);
+  }
+
+  /* Halftone dot texture overlay for panels */
+  .halftone {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 6px 6px;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
